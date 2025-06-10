@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState,use } from 'react';
 import axios from 'axios';
 export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
@@ -15,6 +15,8 @@ export const DataProvider = ({ children }) => {
     };
     fetchBuses();
   },[])
+
+  
 
   return (
     <DataContext.Provider value={{ bus }}>
